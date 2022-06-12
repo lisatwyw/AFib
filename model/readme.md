@@ -32,3 +32,9 @@
 ### ED specific
 47: 
 44: 
+
+
+
+```
+np.set_printoptions(formatter={'float': lambda x: "{0:0.3f}".format(x)})
+```
