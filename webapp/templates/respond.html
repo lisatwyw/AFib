@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estimate risks</title>
+    <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+        <h1>Risk assessment for patients with AFib (Version 0.1)</h1>
+
+        <h2>About</h2>
+        <p>This prototype was designed to help clinicians assess the future risks of <strong>stroke and major bleeding</strong> for patients with atrial fibrillation (AFib) using a
+        cohort from British Columbia, Canada (n=123,672).
+        </p>
+        <p><strong>This is a research prototype only</strong>. Please contact us for more information on the status of our research.</p>
+
+        <hr>
+
+        <p>Please enter patient's info at time of incident AF diagnosis:</p>
+        <form action = {{ url_for('make_prediction')}} method = "post">
+
+        <div>Age at time of AF diagnosis (enter the integer for years):
+        <input class="age_input" required type="number" min="1" max="120" name="age" pattern="[+-]?([0-9]*[.])?[0-9]+" oninvalid="setCustomValidity('Please enter a valid value')"
+    onchange="try{setCustomValidity('')}catch(e){}" /><label for="age">Years old</label>
+        </div>
+
+        <fieldset>
+        <legend>Check all that applies:</legend>
+
+        <div class="tooltip"><input type="checkbox" name="history" id="hypertension" value="hypertension">
+            <label for="hypertension">Have hypertension</label>
+            <span class="tooltiptext">Any one of I10 to I13, I15 (ICD-10-CA)</span>
+        </div>
+
+        <div class="tooltip"><input type="checkbox" name="history" id="chf" value="chf">
+            <label for="chf">History of congestive heart failure</label>
+            <span class="tooltiptext">Any one of I43, I50, I099, I110, I130, I132, I255, I420, I425, I426, I427, I428, I429, P290 (ICD-10-CA)</span>
+        </div>
+
+        <div class="tooltip"><input type="checkbox" name="history" id="nocomp" value="nocomp">
+            <label for="nocomp">History of diabetes without complications</label>
+            <span class="tooltiptext">Any one of E100, E101, E106, E108, E109, E110, E111, E116, E118, E119, E120, E121, E126, E128, E129, E130, E131, E136, E138, E139, E140, E141, E146, E148, E149
+            </span>
+        </div>
+
+        <div class="tooltip"><input type="checkbox" name="history" id="comp" value="comp">
+            <label for="comp">History of diabetes <em>with</em> complications</label>
+            <span class="tooltiptext">Any one of E102, E103, E104, E105, E107, E112, E113, E114, E115, E117, E122, E123, E124, E125, E127, E132, E133, E134, E135, E137, E142, E143, E144, E145, E147 (ICD-10-CA)</span>
+        </div>
+
+        <div class="tooltip">
+            <input type="checkbox" name="history" id="stroke" value="stroke">
+            <label for="stroke">History of stroke</label>
+            <span class="tooltiptext">Any one of H34.1, I61, I63, I64, G45 (ICD-10-CA)</span>
+        </div>
+
+        <div class="tooltip"><input type="checkbox" name="history" id="cvd" value="cvd">
+            <label for="cvd">History of Cerebrovascular disease (CVD)</label>
+            <span class="tooltiptext">Any one of G45, G46, I60, I61, I62, I63, I64, I65, I66, I67, I68, I69, H340 (ICD-10-CA)</span>
+        </div>
+
+        </fieldset>
+
+        <p><input class="button" type="submit" value="Predict stroke risks"/></p>
+        </form>
+
+        <hr>
+        <h2>{{ heading }}</h2>
+        <div>
+            <p>Risk relative to average patient with AF in BC: {{ msg }}</p>
+            <table>
+            <tr>
+                <th>Year 1</th>
+                <th>Year 2</th>
+                <th>Year 3</th>
+                <th>Year 5</th>
+                <th>Year 8</th>
+            </tr>
+            <tr>
+                <td>{{ msg1 }}</td>
+                <td>{{ msg2 }}</td>
+                <td>{{ msg3 }}</td>
+                <td>{{ msg5 }}</td>
+                <td>{{ msg8 }}</td>
+            </tr>
+            </table>
+
+        </div>
+
+        <div>
+            <p>{{ msg0 }}</p>
+        </div>
+
+</body>
+</html>
+
