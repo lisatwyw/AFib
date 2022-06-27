@@ -2,12 +2,13 @@
 
 Site under construction!!!
 
+## Introduction
 
+Demos to the **risk estimation models** can be [tested out here](afib_predict_death.ipynb) using a Google Colab account. 
 
+## Simplified
 
-The death risk estimation model can be found [here](afib_predict_death.ipynb) and deployed using a Google Colab account, for instance.
-
-```
+The simplified **death risk estimation model** can be [tested here](afib_predict_death.ipynb); it uses 14 variables:
 - Current age
 - Male sex?
 - Has COPD
@@ -22,4 +23,3 @@ The death risk estimation model can be found [here](afib_predict_death.ipynb) an
 - Age when diagnosed with cancer prior to AF Dx
 - Age of last sepsis prior to AF Dx
 - Diuretic loop: # of days prescribed with diuretic loop prior to AF Dx
-```
