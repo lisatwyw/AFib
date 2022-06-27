@@ -4,7 +4,7 @@ Site under construction!!!
 
 ## Introduction
 
-Demos to the **risk estimation models** can be [tested out here](afib_predict_death.ipynb) using a Google Colab account. 
+Demos to the **risk estimation models** can be [tested out here](stroke_bleed_death_estimations.ipynb) using a Google Colab account. 
 
 ## Simplified
 
