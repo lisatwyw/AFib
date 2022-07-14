@@ -28,3 +28,10 @@
   - ```python setup_functions.py install --user  # <-- if you don't have admin rights ```
   
  
+
+## Requirements
+
+- torch
+- copy
+- progressbar
+
