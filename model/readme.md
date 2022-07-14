@@ -3,27 +3,30 @@
 ## DeepSurv
 
 
-1. Create a script ```setup_functions.py``` with contents:
+1. Cythonize: 
+  ```cythonize -a -i _functions.pyx```
+2. Create a script ```setup_functions.py``` with contents:
   ```
-  import cython
-  from Cython.Build import cythonize
-
-  from distutils.core import setup, Extension
-
-
-
-  # https://github.com/square/pysurvival/blob/841b9bc6ce700ba8898d2a1488aa9cd25ee7a8e6/setup.py | c++11
-
-  setup(ext_modules = cythonize(Extension(
-      "_functions",
-      sources=["_functions.pyx" ],
-      language="c++11",
-      include_dirs=["../base"],
-      extra_compile_args=["-DPLATFORM=linux -std=c++11"]
-  )))
+    from setuptools import setup, Extension
+    from Cython.Build import cythonize
+    
+    setup(ext_modules = cythonize( Extension(      
+        name="_functions",
+        sources = ["cpp_extensions/_functions.cpp",
+               "cpp_extensions/functions.cpp" ,
+               ],        
+        extra_compile_args = extra, 
+        language="c++" 
+      )))
+    
+    
   ```
 2. Execute:
   ```module load gcc/9.1.0```
 3. Rum script
   ```python setup_functions.py build_ext --inplace```
   
+  
+  ```python setup_functions.py install --user  # <-- if you don't have admin rights ```
+  
+ 
