@@ -1,6 +1,8 @@
 
 
-## DeepSurv
+# 1. Deep Survival Models
+# 2. MLP-surv
+# 3. DeepSurv
 
 
 1. Cythonize: 
