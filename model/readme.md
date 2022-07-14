@@ -21,9 +21,9 @@
     
     
   ```
-2. Execute:
+3. Execute:
   ```module load gcc/9.1.0```
-3. Rum script
+4. Run script:
   ```python setup_functions.py build_ext --inplace```
   
   
