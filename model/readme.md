@@ -24,7 +24,7 @@
 3. Execute:
   ```module load gcc/9.1.0```
 4. Run script:
-  ```python setup_functions.py build_ext --inplace``` 
-  ```python setup_functions.py install --user  # <-- if you don't have admin rights ```
+  - ```python setup_functions.py build_ext --inplace```; or 
+  - ```python setup_functions.py install --user  # <-- if you don't have admin rights ```
   
  
