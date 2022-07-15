@@ -43,10 +43,6 @@
 | | 400_200_19_corr_BN1_selu_DO0.3_07 |  0.73,0.72,0.72| 0.78 | 0.45 | 
 | | 100_75_50_25_19_corr_BN1_selu_DO0.3_07 |  0.74,0.73,0.73 | 0.79 | 0.55 | 
 | | 117_78_39_19_corr_BN1_selu_DO0.3_07-15 |0.73,0.73,0.73 | 0.79 | 0.45 | 
-
-
-| Algm | Settings| C-indices | DAUC |  Integated Brier Score  |
-|--|--|--|--|--|
 | DeepSurv | 200-100-50 BentIdentity | 0.74,0.74,0.74 | 0.80 | 0.47 | 
 | Nnet-survival | 1 layer | 0.73,0.72,0.71 | 0.79| 0.44 |
 
