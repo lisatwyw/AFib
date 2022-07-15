@@ -76,7 +76,21 @@
 - 70% training + validation set
 - 19 intervals
 
-| Algm | Settings| Integated Brier Score | DAUC |C-index |
+| Algm | Settings| C-indices | DAUC |  Integated Brier Score  |
 |--|--|--|--|--|
-| MLP-surv | 200-50-19 | 0.509 | 79.1 | 72.5, 72.0 |
+| MLP-surv | 200-50-19 | 0.72,0.72,0.71| .79 | 0.52 |
 
+```
+200_50_19_nph_BN1_selu_DO0.3_07-15
+
+last:
+trn 0.73,0.72,0.72, DAUC=0.80, IBS=0.58
+val 0.70,0.69,0.69, DAUC=0.76, IBS=0.58
+tst 0.72,0.72,0.71, DAUC=0.79, IBS=0.55
+
+best:
+trn 0.73,0.72,0.72, DAUC=0.79, IBS=0.54
+val 0.71,0.70,0.69, DAUC=0.77, IBS=0.55
+tst 0.72,0.72,0.71, DAUC=0.79, IBS=0.52
+
+```
