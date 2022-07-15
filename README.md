@@ -6,7 +6,7 @@ Site under construction!!!
 
 Demos that can be tried using any (free) Google Colab account:
 - [Demos to the *risk estimation models*](stroke_bleed_death_estimations.ipynb) 
-- [Demos to the *NNsurv architecture*](afib_predict_death_risks_nnsurv.ipynb) 
+- [Demos to the *MLP-surv architecture*](afib_predict_death_risks_nnsurv.ipynb) 
 
 ## Simplified
 
