@@ -1,2 +1,3 @@
 scipy
 scikit-survival
+scikit-learn
