@@ -47,13 +47,27 @@
 
 ## Results on SUPPORT
 
+### Round 1
 - 70% training set
 - 9105 hospitalized patients
 - maximum time2event: 5.5 
-
 
 | Algm | Brier Score | C-index |
 |--|--|--|
 | Nnet-survival | n/a | 72.8 | 
 | DeepSurv-150 | n/a | 73.8 |
-| DeepSurv-117-78 | n/a | 73.9 |
+| DeepSurv-117-78 | n/a | 73.90 |
+| DeepSurv-156-78-117 | n/a | 73.90 |
+
+
+### Round 2
+- 70% training + validation set
+
+| Algm | Settings|Brier Score | C-index |
+|--|--|--|--|
+| Nnet-survival | Zeros | n/a | 72.7, 72.5 | 
+| Nnet-survival | RandU | n/a | 72.8, 72.7 | 
+| MLP-surv |BN-DO0-BS64 | n/a | 74.9, 71.6 | 
+| MLP-surv |BN-DO0.3-BS64 | n/a | 73.5, 73.1 | 
+| MLP-surv |BN-DO0.3-BS256 | n/a | 72.5, 72.3 | 
+
