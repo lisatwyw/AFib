@@ -42,5 +42,7 @@
 
 ## Results on SUPPORT
 
-| | |
-|--|--| 
+| Algm | Brier Score | C-index |
+|--|--|--|
+| DeepSurv-150 | n/a | 73.8 |
+| DeepSurv-117-78 | | 73.9 |
