@@ -74,8 +74,9 @@
 
 ### Round 3
 - 70% training + validation set
+- 19 intervals
 
 | Algm | Settings| Integated Brier Score | DAUC |C-index |
 |--|--|--|--|--|
-| MLP-surv | 200-50-19 | | |
+| MLP-surv | 200-50-19 | 0.509 | 79.1 | 72.5, 72.0 |
 
