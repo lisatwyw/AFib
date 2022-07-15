@@ -6,6 +6,9 @@
 
 - Simplified from ```pysurvival```
 
+0. Install Cython package
+  ```pip install Cython --install-option="--no-cython-compile"```
+
 1. Cythonize: 
   ```cythonize -a -i _functions.pyx```
 2. Create a script ```setup_functions.py``` with contents:
@@ -20,16 +23,18 @@
                ],        
         extra_compile_args = extra, 
         language="c++" 
-      )))
-    
-    
+      )))      
   ```
+  
 3. Execute:
   ```module load gcc/9.1.0```
+  
 4. Run script:
   - ```python setup_functions.py build_ext --inplace```; or 
   - ```python setup_functions.py install --user  # <-- if you don't have admin rights ```
   
+ 
+
  
 
 ## Requirements
@@ -42,7 +47,13 @@
 
 ## Results on SUPPORT
 
+- 70% training set
+- 9105 hospitalized patients
+- maximum time2event: 5.5 
+
+
 | Algm | Brier Score | C-index |
 |--|--|--|
+| Nnet-survival | n/a | 72.8 | 
 | DeepSurv-150 | n/a | 73.8 |
-| DeepSurv-117-78 | | 73.9 |
+| DeepSurv-117-78 | n/a | 73.9 |
