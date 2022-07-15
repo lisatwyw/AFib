@@ -4,6 +4,7 @@
 # 2. MLP-surv
 # 3. DeepSurv
 
+- Simplified from ```pysurvival```
 
 1. Cythonize: 
   ```cythonize -a -i _functions.pyx```
