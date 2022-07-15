@@ -65,9 +65,17 @@
 
 | Algm | Settings|Brier Score | C-index |
 |--|--|--|--|
-| Nnet-survival | Zeros | n/a | 72.7, 72.5 | 
-| Nnet-survival | RandU | n/a | 72.8, 72.7 | 
+| Nnet-survival | Zeros-BS64 | n/a | 72.7, 72.5 | 
+| Nnet-survival | RandU-BS64 | n/a | 72.8, 72.7 | 
 | MLP-surv |BN-DO0-BS64 | n/a | 74.9, 71.6 | 
 | MLP-surv |BN-DO0.3-BS64 | n/a | 73.5, 73.1 | 
 | MLP-surv |BN-DO0.3-BS256 | n/a | 72.5, 72.3 | 
+
+
+### Round 3
+- 70% training + validation set
+
+| Algm | Settings| Integated Brier Score | DAUC |C-index |
+|--|--|--|--|--|
+| MLP-surv | 200-50-19 | | |
 
