@@ -45,7 +45,8 @@
 | | 117_78_39_19_corr_BN1_selu_DO0.3_07-15 |0.73,0.73,0.73 | 0.79 | 0.45 | 
 | DeepSurv | 200-100-50 BentIdentity | 0.74,0.74,0.74 | 0.80 | 0.47 | 
 | Nnet-survival | 1 layer | 0.73,0.72,0.71 | 0.79| 0.44 |
-| Py-Cox | | n/a | 0.76 | 0.41  | 
+| Py-Cox | 4dims-BS256 | n/a | 0.76 | 0.41  | 
+|  | 2dims-BS64 | n/a | 0.77 | 0.40  | 
 
 BentIdentity: ```x + (torch.sqrt(1.+ x*x)- 1.)/2```
 
