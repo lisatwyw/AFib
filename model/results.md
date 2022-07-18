@@ -46,8 +46,9 @@
 | DeepSurv | 200-100-50 BentIdentity | 0.74,0.74,0.74 | 0.80 | 0.47 | 
 | Nnet-survival | 1 layer | 0.73,0.72,0.71 | 0.79| 0.44 |
 | Py-Cox | 4dims-BS256 | n/a | 0.76 | 0.41  | 
-|  | 2dims-BS64 | n/a | 0.77 | 0.40  | 
-
+| | 2dims-BS64 | n/a | 0.77 | 0.40  | 
+| | 2dims-BS32 | 0.75 | 0.40 |
+| | 2dims- | 0.78 | 0.41 |
 BentIdentity: ```x + (torch.sqrt(1.+ x*x)- 1.)/2```
 
 ```
