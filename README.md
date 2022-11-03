@@ -1,7 +1,5 @@
 # AFib
 
-Site under construction!!!
-
 ## Introduction
 
 Demos that can be tried using any (free) Google Colab account:
